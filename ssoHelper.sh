@@ -71,7 +71,7 @@ EOF
 
 echo "#### Checking awscli config file for sso session ####"
 if ! grep -qF "sso-session $1" $cfg; then
-    echo "#### No session finding adding new one ####"
+    echo "#### No session found adding new one ####"
     cat <<EOF >> $cfg
 [sso-session $1]
 sso_start_url = https://vtex-accounts.awsapps.com/start#/
